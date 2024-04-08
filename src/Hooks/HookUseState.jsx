@@ -16,6 +16,10 @@ function HookUseState() {
       Age: 30,
     },
   ]);
+  const [singleData, setSingleData] = useState({
+    Name: "Solangi",
+    Age: 40,
+  });
 
   const [toggle, setToggle] = useState(false);
 
@@ -107,6 +111,24 @@ function HookUseState() {
       >
         Clear Data
       </button>
+
+      <button
+        style={{ margin: 10, height: 40 }}
+        onClick={() => {
+          setSingleData(
+            {
+              ...singleData,
+              Name: "Test",
+            },
+          );
+        }}
+      >
+        Update Data
+      </button>
+
+      <h4 style={{ color: "#fff" }}> Welcome State Object Handling</h4>
+      <h6 style={{ color: "#fff" }}>Name : {singleData.Name}</h6>
+      <h6 style={{ color: "yellow" }}>Age : {singleData.Age}</h6>
     </>
   );
 }
