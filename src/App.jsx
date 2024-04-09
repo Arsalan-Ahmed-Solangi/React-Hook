@@ -1,14 +1,15 @@
 import "./App.css";
+import DynamicForm from "./Hooks/DynamicForm";
+import Form from "./Hooks/Form";
+import HookUseEffect from "./Hooks/HookUseEffect";
 
-import HookUseState from "./Hooks/HookUseState";
-import TodoList from "./Hooks/TodoList";
 function App() {
   return (
     <>
       <h2 style={{ color: "aliceblue", fontFamily: "calibri " }}>
-        TODO LIST USING USESTATE HOOK
+        HOOK USE EFFECT
       </h2>
-      <TodoList />
+      <HookUseEffect />
     </>
   );
 }
