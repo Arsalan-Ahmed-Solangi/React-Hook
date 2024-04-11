@@ -1,18 +1,19 @@
 import "./App.css";
-import DynamicForm from "./Hooks/DynamicForm";
-import FetchApi from "./Hooks/FetchApi";
-import Form from "./Hooks/Form";
-import HookReducer from "./Hooks/HookReducer";
-import HookUseEffect from "./Hooks/HookUseEffect";
-import HookUseRef from "./Hooks/HookUseRef";
+
+import useFetch from "./Hooks/useCustomHook";
 
 function App() {
-  return (
-    <>
-    
-      <HookReducer />
-    </>
-  );
+  const { data, isLoading, error } = useFetch("https://dummyjson.com/products");
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return <div> { JSON.stringify(data)  } </div>;
 }
 
 export default App;
