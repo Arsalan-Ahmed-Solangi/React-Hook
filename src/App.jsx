@@ -9,9 +9,7 @@ import HookUseRef from "./Hooks/HookUseRef";
 function App() {
   return (
     <>
-      <h2 style={{ color: "aliceblue", fontFamily: "calibri " }}>
-        UNCONTROLLED & CONTROLLED FORM
-      </h2>
+    
       <HookReducer />
     </>
   );
